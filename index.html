@@ -3,89 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multifunctional Mop Holder - Solusi Praktis Rumah Rapi</title>
-    <meta name="description" content="Gantungan sapu dan pel multifungsi dengan 6 hook dan 5 slot. Hemat tempat, tahan lama, mudah dipasang. Cocok untuk dapur, gudang, dan area cleaning.">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Multifunctional Mop Holder - Solusi Praktis Rumah Rapi">
-    <meta property="og:description" content="Gantungan sapu dan pel multifungsi dengan 6 hook dan 5 slot. Hemat tempat, tahan lama, mudah dipasang.">
-    <meta property="og:image" content="https://cdn.fastcdnshop.com/image/09cdaf7c7a4416827d8b4c7c72076168f9be5db5-700.jpeg">
-    <meta property="og:type" content="product">
-    
-    <!-- Tailwind CSS -->
+    <title>Luxury Car Seat Accessories - Premium Comfort for Your Vehicle</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
         body {
             font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
         }
         
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://ae01.alicdn.com/kf/S1d919fbea154471d80e8ecc873b7ec6eF.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         
-        .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
         }
         
-        .floating-animation {
-            animation: floating 3s ease-in-out infinite;
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            animation: zoom 0.6s;
         }
         
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
         }
         
-        .pulse-animation {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
         }
         
-        .fade-in {
-            animation: fadeIn 1s ease-in-out;
+        .close:hover {
+            color: #bbb;
+            cursor: pointer;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            animation: pulse 2s infinite;
         }
         
-        .bounce-in {
-            animation: bounceIn 1s ease-out;
-        }
-        
-        @keyframes bounceIn {
-            0% { transform: scale(0.3); opacity: 0; }
+        @keyframes pulse {
+            0% { transform: scale(1); }
             50% { transform: scale(1.05); }
-            70% { transform: scale(0.9); }
-            100% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1); }
         }
         
-        .slide-in-left {
-            animation: slideInLeft 0.8s ease-out;
-        }
-        
-        @keyframes slideInLeft {
-            from { transform: translateX(-100px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        
-        .slide-in-right {
-            animation: slideInRight 0.8s ease-out;
-        }
-        
-        @keyframes slideInRight {
-            from { transform: translateX(100px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+        .counter-box {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
         .testimonial-card {
@@ -93,370 +85,705 @@
         }
         
         .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
-        .feature-card {
+        .gallery-item {
             transition: all 0.3s ease;
+            cursor: pointer;
         }
         
-        .feature-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        .gallery-item:hover {
+            transform: scale(1.03);
         }
         
-        .price-banner {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-            animation: priceGlow 2s ease-in-out infinite alternate;
-        }
-        
-        @keyframes priceGlow {
-            from { box-shadow: 0 0 20px rgba(255, 107, 107, 0.5); }
-            to { box-shadow: 0 0 30px rgba(255, 107, 107, 0.8); }
-        }
-        
-        .sticky-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-            padding: 15px;
-            box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
-            transform: translateY(100px);
-            transition: transform 0.3s ease;
-        }
-        
-        .sticky-cta.visible {
-            transform: translateY(0);
-        }
-        
-        @media (max-width: 768px) {
-            .hero-text h1 {
-                font-size: 2.5rem;
-                line-height: 1.2;
-            }
-        }
-        
-        .counter-animation {
-            animation: counterPulse 1.5s ease-in-out infinite;
-        }
-        
-        @keyframes counterPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+        .price-tag {
+            background: linear-gradient(135deg, #d4a373 0%, #faedcd 100%);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-car text-2xl text-amber-500 mr-2"></i>
+                <span class="text-xl font-bold">LuxuryCarSeat</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#features" class="hover:text-amber-400 transition">Fitur</a>
+                <a href="#gallery" class="hover:text-amber-400 transition">Galeri</a>
+                <a href="#testimonials" class="hover:text-amber-400 transition">Testimoni</a>
+                <a href="#faq" class="hover:text-amber-400 transition">FAQ</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 py-2">
+            <a href="#features" class="block py-2 hover:text-amber-400 transition">Fitur</a>
+            <a href="#gallery" class="block py-2 hover:text-amber-400 transition">Galeri</a>
+            <a href="#testimonials" class="block py-2 hover:text-amber-400 transition">Testimoni</a>
+            <a href="#faq" class="block py-2 hover:text-amber-400 transition">FAQ</a>
+            <a href="#order" class="block py-2 bg-amber-500 text-white rounded text-center font-bold mt-2">BELI SEKARANG</a>
+        </div>
+    </header>
+
     <!-- Hero Section -->
-    <section class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-        <div class="absolute top-10 left-10 w-20 h-20 bg-white bg-opacity-10 rounded-full floating-animation"></div>
-        <div class="absolute bottom-20 right-20 w-16 h-16 bg-white bg-opacity-10 rounded-full floating-animation" style="animation-delay: 1s;"></div>
-        <div class="absolute top-1/2 right-10 w-12 h-12 bg-white bg-opacity-10 rounded-full floating-animation" style="animation-delay: 2s;"></div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <!-- Left Content -->
-                <div class="hero-text text-white slide-in-left">
-                    <div class="mb-6">
-                        <span class="inline-block bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold mb-4 bounce-in">🔥 PROMO TERBATAS!</span>
-                        <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-                            Rumah Rapi, <br>
-                            <span class="text-yellow-300">Hidup Lebih Teratur!</span>
-                        </h1>
-                        <p class="text-xl md:text-2xl mb-6 text-gray-200">
-                            Multifunctional Mop Holder - Solusi praktis untuk menyimpan sapu, pel, dan alat kebersihan lainnya dengan rapi dan mudah dijangkau.
-                        </p>
-                    </div>
-                    
-                    <!-- Dynamic Counters -->
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="text-center bg-white bg-opacity-20 backdrop-blur rounded-lg p-4 counter-animation">
-                            <div class="text-2xl md:text-3xl font-bold text-yellow-300" id="viewers">2,847</div>
-                            <div class="text-sm text-gray-200">Sedang Melihat</div>
-                        </div>
-                        <div class="text-center bg-white bg-opacity-20 backdrop-blur rounded-lg p-4 counter-animation">
-                            <div class="text-2xl md:text-3xl font-bold text-red-300" id="stock">23</div>
-                            <div class="text-sm text-gray-200">Stok Tersisa</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Countdown Timer -->
-                    <div class="bg-red-600 rounded-lg p-4 mb-6 text-center">
-                        <p class="text-sm mb-2">⏰ PROMO BERAKHIR DALAM:</p>
-                        <div class="flex justify-center space-x-4 text-2xl font-bold" id="countdown">
-                            <div><span id="hours">12</span><small class="block text-xs">JAM</small></div>
-                            <div>:</div>
-                            <div><span id="minutes">34</span><small class="block text-xs">MENIT</small></div>
-                            <div>:</div>
-                            <div><span id="seconds">56</span><small class="block text-xs">DETIK</small></div>
-                        </div>
-                    </div>
-                    
-                    <!-- CTA Button -->
-                    <a href="https://nava.orderonline.id/checkout-multifunctional-mop-holder-with-hook" target="_blank" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 pulse-animation">
-                        PESAN SEKARANG - GRATIS ONGKIR!
-                    </a>
+    <section class="hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Luxury Car Seat Accessories</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Tingkatkan Kenyamanan & Gaya Interior Mobil Anda dengan Aksesori Premium</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 mb-10">
+                <div class="bg-amber-500 px-6 py-3 rounded-full font-bold shadow-lg">
+                    <span class="line-through mr-2">Rp 268,000</span>
+                    <span class="text-2xl">Rp 179,999</span>
                 </div>
-                
-                <!-- Right Content - Product Image -->
-                <div class="text-center slide-in-right">
-                    <img src="https://cdn.fastcdnshop.com/image/09cdaf7c7a4416827d8b4c7c72076168f9be5db5-700.jpeg" 
-                         alt="Multifunctional Mop Holder" 
-                         class="w-full max-w-md mx-auto floating-animation rounded-2xl shadow-2xl">
+                <div class="bg-red-500 px-4 py-2 rounded-full text-sm font-bold">
+                    PROMO TERBATAS!
+                </div>
+            </div>
+            
+            <a href="#order" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 inline-block shadow-lg transform hover:scale-105">
+                BELI SEKARANG <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            
+            <div class="mt-12 flex justify-center space-x-8">
+                <div class="text-center">
+                    <div class="text-3xl font-bold counter" data-target="12543">0</div>
+                    <div class="text-sm">Pembeli</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold counter" data-target="97">0</div>
+                    <div class="text-sm">Rating (5★)</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold counter" data-target="42">0</div>
+                    <div class="text-sm">Stok Tersisa</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Price Banner -->
-    <div class="price-banner text-white py-8">
+    <!-- Countdown Timer -->
+    <section class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">⚡ HARGA SPESIAL HARI INI! ⚡</h2>
-            <div class="flex justify-center items-center space-x-6">
-                <div class="text-center">
-                    <div class="text-gray-300 line-through text-xl">Rp 262.500</div>
-                    <div class="text-4xl md:text-5xl font-bold text-yellow-300">Rp 175.000</div>
-                    <div class="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold inline-block mt-2">
-                        HEMAT 49%!
-                    </div>
-                </div>
+            <h3 class="text-xl font-bold mb-2">PROMO BERAKHIR DALAM:</h3>
+            <div id="countdown" class="flex justify-center space-x-4 text-2xl font-bold">
+                <div><span id="hours">00</span> <span class="text-sm">Jam</span></div>
+                <div>:</div>
+                <div><span id="minutes">00</span> <span class="text-sm">Menit</span></div>
+                <div>:</div>
+                <div><span id="seconds">00</span> <span class="text-sm">Detik</span></div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Product Description -->
+    <!-- Problem Solution Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold mb-6 gradient-text">Mengapa Memilih Multifunctional Mop Holder?</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Dirancang khusus untuk kebutuhan rumah tangga modern, produk ini menggabungkan fungsi penyimpanan yang praktis dengan desain yang elegan. Terbuat dari material berkualitas tinggi yang tahan lama dan mudah dipasang tanpa perlu bor dinding.
-                </p>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Masalah yang Sering Dihadapi Pemilik Mobil</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8 slide-in-left">
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-blue-100 p-3 rounded-full">
-                            <i class="fas fa-home text-blue-600 text-xl"></i>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                            <i class="fas fa-exclamation"></i>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">Hemat Ruang Maksimal</h3>
-                            <p class="text-gray-600">Dengan 6 hook dan 5 slot penyimpanan, Anda bisa menyimpan berbagai alat kebersihan dalam satu tempat yang kompak dan terorganisir.</p>
-                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Kursi Mobil Tidak Nyaman</h3>
                     </div>
-                    
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-green-100 p-3 rounded-full">
-                            <i class="fas fa-tools text-green-600 text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">Mudah Dipasang</h3>
-                            <p class="text-gray-600">Sistem pemasangan tanpa bor dengan lem kuat 3M. Cukup tempel di dinding yang bersih dan kering, siap digunakan dalam hitungan menit!</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start space-x-4">
-                        <div class="bg-purple-100 p-3 rounded-full">
-                            <i class="fas fa-shield-alt text-purple-600 text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-2">Material Premium</h3>
-                            <p class="text-gray-600">Terbuat dari plastik ABS berkualitas tinggi yang tahan air, anti karat, dan mampu menahan beban hingga 15kg dengan aman.</p>
-                        </div>
-                    </div>
+                    <p class="text-gray-600">Banyak pengemudi mengeluh kursi mobil yang keras dan tidak ergonomis menyebabkan pegal dan nyeri punggung setelah berkendara lama.</p>
                 </div>
                 
-                <div class="slide-in-right">
-                    <img src="https://cdn.fastcdnshop.com/image/e151475271efeb413ce032d5df1cd9f414964f26.gif" 
-                         alt="Cara Penggunaan Mop Holder" 
-                         class="w-full rounded-2xl shadow-xl">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                            <i class="fas fa-exclamation"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Interior Terlihat Biasa Saja</h3>
+                    </div>
+                    <p class="text-gray-600">Interior mobil standar seringkali terlihat membosankan dan tidak mencerminkan gaya pribadi pemiliknya.</p>
                 </div>
+                
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                            <i class="fas fa-exclamation"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Keringat dan Panas</h3>
+                    </div>
+                    <p class="text-gray-600">Kursi mobil yang panas dan membuat berkeringat saat cuaca terik sangat mengganggu kenyamanan berkendara.</p>
+                </div>
+                
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                            <i class="fas fa-exclamation"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Mudah Kotor</h3>
+                    </div>
+                    <p class="text-gray-600">Kursi mobil asli cepat kotor dan sulit dibersihkan, terutama jika terkena noda makanan atau minuman.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-amber-50 border-l-4 border-amber-500 p-6 rounded-lg">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Solusi: Luxury Car Seat Accessories</h3>
+                <p class="text-gray-700">Dengan aksesori kursi mobil premium kami, semua masalah tersebut dapat teratasi. Produk kami dirancang khusus untuk memberikan kenyamanan maksimal, perlindungan kursi, dan meningkatkan estetika interior mobil Anda.</p>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-gray-100">
+    <section id="features" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold mb-6 gradient-text">Fitur Unggulan Yang Akan Anda Dapatkan</h2>
-                <p class="text-xl text-gray-600">Setiap detail dirancang untuk memberikan kemudahan maksimal dalam kehidupan sehari-hari</p>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Fitur Unggulan Produk Kami</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="feature-card bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-grip-horizontal text-blue-600 text-2xl"></i>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-couch text-2xl text-amber-600"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">6 Hook Serbaguna</h3>
-                    <p class="text-gray-600">Hook yang kuat untuk menggantung sapu, pel, sikat, dan alat kebersihan lainnya. Masing-masing hook dapat menahan beban hingga 2kg.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Material Premium</h3>
+                    <p class="text-gray-600">Terbuat dari bahan berkualitas tinggi yang lembut, bernapas, dan tahan lama untuk kenyamanan maksimal.</p>
                 </div>
                 
-                <div class="feature-card bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-th-large text-green-600 text-2xl"></i>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-thermometer-half text-2xl text-amber-600"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">5 Slot Penyimpanan</h3>
-                    <p class="text-gray-600">Slot khusus untuk menyimpan gagang sapu dan pel dengan rapi. Desain slot yang presisi mencegah alat jatuh atau bergeser.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Sirkulasi Udara Baik</h3>
+                    <p class="text-gray-600">Desain ventilasi khusus mengurangi panas dan keringat saat berkendara di cuaca panas.</p>
                 </div>
                 
-                <div class="feature-card bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-magic text-purple-600 text-2xl"></i>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl text-amber-600"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Pemasangan Ajaib</h3>
-                    <p class="text-gray-600">Tanpa perlu bor atau paku! Sistem adhesive 3M yang super kuat memungkinkan pemasangan instan tanpa merusak dinding.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Perlindungan Kursi</h3>
+                    <p class="text-gray-600">Melindungi kursi mobil asli dari keausan, noda, dan kerusakan sehingga tetap seperti baru.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-paint-brush text-2xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Desain Elegan</h3>
+                    <p class="text-gray-600">Tampilan mewah yang meningkatkan nilai estetika interior mobil Anda.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-broom text-2xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Mudah Dibersihkan</h3>
+                    <p class="text-gray-600">Material anti noda yang mudah dibersihkan hanya dengan lap basah.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-car text-2xl text-amber-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Universal Fit</h3>
+                    <p class="text-gray-600">Cocok untuk hampir semua jenis mobil dengan sistem pengait yang mudah dipasang.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How to Use -->
-    <section class="py-16 bg-white">
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold mb-6 gradient-text">Cara Penggunaan Super Mudah</h2>
-                <p class="text-xl text-gray-600">Hanya 3 langkah sederhana untuk rumah yang lebih rapi!</p>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Galeri Produk</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div class="text-center">
-                    <div class="w-24 h-24 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">1</div>
-                    <h3 class="text-xl font-semibold mb-4">Bersihkan Dinding</h3>
-                    <p class="text-gray-600">Pastikan permukaan dinding bersih, kering, dan rata. Hindari dinding yang bercat kusam atau bertekstur kasar.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="gallery-item">
+                    <img src="https://ae01.alicdn.com/kf/S1d919fbea154471d80e8ecc873b7ec6eF.jpg" alt="Luxury Car Seat Accessories" class="w-full h-auto rounded-lg cursor-pointer" onclick="openModal(this)">
                 </div>
-                
-                <div class="text-center">
-                    <div class="w-24 h-24 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">2</div>
-                    <h3 class="text-xl font-semibold mb-4">Tempel & Tekan</h3>
-                    <p class="text-gray-600">Lepas pelindung adhesive dan tempel holder ke dinding. Tekan kuat-kuat selama 30 detik untuk hasil maksimal.</p>
+                <div class="gallery-item">
+                    <img src="https://ae01.alicdn.com/kf/S47c895fb82e14c1184cc414c70c25fbel.jpg" alt="Luxury Car Seat Accessories" class="w-full h-auto rounded-lg cursor-pointer" onclick="openModal(this)">
                 </div>
-                
-                <div class="text-center">
-                    <div class="w-24 h-24 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">3</div>
-                    <h3 class="text-xl font-semibold mb-4">Siap Digunakan!</h3>
-                    <p class="text-gray-600">Tunggu 1 jam agar adhesive menempel sempurna, lalu mulai rapikan alat kebersihan Anda dengan praktis!</p>
+                <div class="gallery-item">
+                    <img src="https://ae01.alicdn.com/kf/S1ebdb783bd6f4719a7b401f8ad426b9dQ.jpg" alt="Luxury Car Seat Accessories" class="w-full h-auto rounded-lg cursor-pointer" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://ae01.alicdn.com/kf/Sd41764012f3c457b8d7615bf861b1685l.jpg" alt="Luxury Car Seat Accessories" class="w-full h-auto rounded-lg cursor-pointer" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://ae01.alicdn.com/kf/S86c53f0dfe3340959031a392b8b97d89c.jpg" alt="Luxury Car Seat Accessories" class="w-full h-auto rounded-lg cursor-pointer" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://ae01.alicdn.com/kf/S9be0308695ac48bbbcbaf82eaeb59880L.jpg" alt="Luxury Car Seat Accessories" class="w-full h-auto rounded-lg cursor-pointer" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://ae01.alicdn.com/kf/Sb5372981fd5c47aaaa3137dcaed886cC.jpg" alt="Luxury Car Seat Accessories" class="w-full h-auto rounded-lg cursor-pointer" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://ae01.alicdn.com/kf/S91a45abf57684859af5868f796468664H.jpg" alt="Luxury Car Seat Accessories" class="w-full h-auto rounded-lg cursor-pointer" onclick="openModal(this)">
                 </div>
             </div>
-            
-            <div class="text-center mt-12">
-                <img src="https://cdn.fastcdnshop.com/image/512cf98eeb7f0178c5d44d45a2321b4c11219464.webp" 
-                     alt="Installed Mop Holder" 
-                     class="w-full max-w-2xl mx-auto rounded-2xl shadow-xl">
-            </div>
+        </div>
+        
+        <!-- Modal for image gallery -->
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-img">
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-4xl font-bold mb-6 gradient-text">Apa Kata Pelanggan Kami?</h2>
-                <p class="text-xl text-gray-600">Ribuan keluarga Indonesia sudah merasakan manfaatnya!</p>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Apa Kata Pelanggan Kami?</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612c4d8?w=60&h=60&fit=crop&crop=face" alt="Sarah" class="w-12 h-12 rounded-full mr-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-amber-600"></i>
+                        </div>
                         <div>
-                            <h4 class="font-semibold">Ibu Sarah</h4>
-                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                            <h4 class="font-bold">Andi Wijaya</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"Luar biasa! Sekarang dapur saya jauh lebih rapi. Sapu dan pel tidak berserakan lagi di sudut ruangan. Pemasangannya mudah banget, cuma 5 menit sudah selesai!"</p>
+                    <p class="text-gray-600">"Produknya sangat nyaman dipakai! Sekarang tidak perlu khawatir kursi mobil cepat kotor. Pemasangannya juga mudah."</p>
                 </div>
                 
-                <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Budi" class="w-12 h-12 rounded-full mr-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-amber-600"></i>
+                        </div>
                         <div>
-                            <h4 class="font-semibold">Pak Budi</h4>
-                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                            <h4 class="font-bold">Budi Santoso</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"Kualitasnya premium, tidak seperti yang biasa dijual di toko. Sudah 6 bulan pakai masih kuat dan tidak kendor. Worth it banget dengan harganya!"</p>
+                    <p class="text-gray-600">"Interior mobil saya sekarang terlihat lebih mewah. Tamu selalu memuji dan bertanya dimana belinya."</p>
                 </div>
                 
-                <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Maya" class="w-12 h-12 rounded-full mr-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-amber-600"></i>
+                        </div>
                         <div>
-                            <h4 class="font-semibold">Ibu Maya</h4>
-                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                            <h4 class="font-bold">Dewi Lestari</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"Sempurna untuk apartemen kecil seperti punya saya. Menghemat space banget dan tampilan jadi lebih elegan. Sudah recommend ke teman-teman!"</p>
+                    <p class="text-gray-600">"Anak-anak sering makan di mobil dan sekarang tidak perlu khawatir noda susah dibersihkan. Produk ini solusi tepat!"</p>
                 </div>
                 
-                <div class="testimonial-card bg-white p-6 rounded-xl shadow-lg">
+                <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Andi" class="w-12 h-12 rounded-full mr-4">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-amber-600"></i>
+                        </div>
                         <div>
-                            <h4 class="font-semibold">Pak Andi</h4>
-                            <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                            <h4 class="font-bold">Rudi Hartono</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"Istri saya sangat senang dengan produk ini. Gudang di belakang rumah jadi lebih teratur. Pelayanan penjualnya juga ramah dan pengiriman cepat!"</p>
+                    <p class="text-gray-600">"Sebagai supir travel, produk ini sangat membantu mengurangi pegal saat mengemudi jarak jauh. Pelanggan juga lebih nyaman."</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Urgency Section -->
-    <section class="py-16 bg-red-600 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold mb-6">⚠️ JANGAN SAMPAI TERLEWAT! ⚠️</h2>
-                <div class="grid md:grid-cols-3 gap-8 mb-8">
-                    <div class="bg-white bg-opacity-20 p-6 rounded-xl">
-                        <div class="text-3xl font-bold text-yellow-300 mb-2">🔥</div>
-                        <h3 class="text-xl font-semibold mb-2">Stok Terbatas</h3>
-                        <p>Hanya tersisa <span class="font-bold text-yellow-300">23 unit</span> untuk batch terakhir bulan ini!</p>
+    <!-- Bonus Section -->
+    <section class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Bonus Spesial Untuk Pembelian Hari Ini!</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start">
+                    <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-gift text-xl"></i>
                     </div>
-                    
-                    <div class="bg-white bg-opacity-20 p-6 rounded-xl">
-                        <div class="text-3xl font-bold text-yellow-300 mb-2">⏰</div>
-                        <h3 class="text-xl font-semibold mb-2">Promo Berakhir</h3>
-                        <p>Harga spesial ini hanya berlaku sampai <span class="font-bold text-yellow-300">akhir hari ini</span>!</p>
-                    </div>
-                    
-                    <div class="bg-white bg-opacity-20 p-6 rounded-xl">
-                        <div class="text-3xl font-bold text-yellow-300 mb-2">📦</div>
-                        <h3 class="text-xl font-semibold mb-2">Gratis Ongkir</h3>
-                        <p>Pengiriman <span class="font-bold text-yellow-300">GRATIS</span> ke seluruh Indonesia untuk 100 pembeli pertama!</p>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Gratis Pengiriman</h3>
+                        <p class="text-gray-600">Nikmati gratis ongkos kirim ke seluruh Indonesia untuk pembelian hari ini.</p>
                     </div>
                 </div>
                 
-                <div class="bg-yellow-400 text-black p-6 rounded-xl mb-8">
-                    <h3 class="text-2xl font-bold mb-4">🎁 BONUS EKSKLUSIF HARI INI!</h3>
-                    <ul class="text-left max-w-2xl mx-auto space-y-2">
-                        <li>✅ Garansi 1 Tahun Penuh</li>
-                        <li>✅ Panduan Pemasangan Bergambar</li>
-                        <li>✅ Customer Support 24/7</li>
-                        <li>✅ Gratis Konsultasi Tatanan Rumah</li>
-                    </ul>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start">
+                    <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-shield-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Garansi 1 Tahun</h3>
+                        <p class="text-gray-600">Kami berikan garansi resmi 1 tahun untuk produk ini.</p>
+                    </div>
                 </div>
                 
-                 <a href="https://nava.orderonline.id/checkout-multifunctional-mop-holder-with-hook" target="_blank" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 pulse-animation">
-                    PESAN SEKARANG - STOCK TERBATAS!
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-start">
+                    <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-book text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">E-Book Perawatan Mobil</h3>
+                        <p class="text-gray-600">Bonus e-book lengkap tentang perawatan dan tips merawat interior mobil.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-lg text-gray-700 mb-6">Bonus hanya berlaku untuk pembelian hari ini. Jangan lewatkan kesempatan ini!</p>
+                <a href="#order" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block shadow-lg transform hover:scale-105">
+                    DAPATKAN BONUS SEKARANG <i class="fas fa-gift ml-2"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Product Gallery -->
-    <section class="py-16 bg-white">
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-6 gradient-text">Lihat Produk Dari Berbagai Angle</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Pertanyaan yang Sering Diajukan</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-6">
+                    <button class="faq-btn w-full text-left bg-gray-100 hover:bg-gray-200 p-4 rounded-lg font-bold flex justify-between items-center transition">
+                        <span>Apakah produk ini cocok untuk semua jenis mobil?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 text-gray-600">
+                        Ya, produk kami didesain dengan sistem universal fit yang cocok untuk hampir semua jenis mobil baik sedan, SUV, MPV, maupun hatchback. Produk ini memiliki pengait yang dapat disesuaikan dengan berbagai ukuran kursi.
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <button class="faq-btn w-full text-left bg-gray-100 hover:bg-gray-200 p-4 rounded-lg font-bold flex justify-between items-center transition">
+                        <span>Bagaimana cara pemasangannya?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 text-gray-600">
+                        Pemasangan sangat mudah dan tidak memerlukan alat khusus. Produk dilengkapi dengan manual panduan lengkap dan juga tersedia video tutorial yang bisa diakses melalui QR code yang disertakan dalam paket.
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <button class="faq-btn w-full text-left bg-gray-100 hover:bg-gray-200 p-4 rounded-lg font-bold flex justify-between items-center transition">
+                        <span>Bagaimana cara perawatannya?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 text-gray-600">
+                        Perawatan sangat praktis. Anda cukup membersihkannya dengan lap basah atau vacuum cleaner secara rutin. Produk ini juga tahan terhadap noda dan mudah dibersihkan jika terkena tumpahan makanan/minuman.
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <button class="faq-btn w-full text-left bg-gray-100 hover:bg-gray-200 p-4 rounded-lg font-bold flex justify-between items-center transition">
+                        <span>Berapa lama waktu pengiriman?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 text-gray-600">
+                        Untuk wilayah Jawa biasanya sampai dalam 2-3 hari kerja. Luar Jawa membutuhkan waktu 3-5 hari kerja. Kami menggunakan jasa pengiriman terpercaya dan akan memberikan nomor resi yang bisa dilacak.
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <button class="faq-btn w-full text-left bg-gray-100 hover:bg-gray-200 p-4 rounded-lg font-bold flex justify-between items-center transition">
+                        <span>Apakah ada garansi untuk produk ini?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 text-gray-600">
+                        Ya, kami memberikan garansi 1 tahun untuk cacat produksi. Jika ada masalah dengan produk yang Anda terima, silakan hubungi customer service kami untuk proses klaim garansi.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Luxury Car Seat Accessories</h2>
+                <p class="text-xl max-w-2xl mx-auto">Tingkatkan kenyamanan dan gaya interior mobil Anda sekarang juga!</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-gray-800 rounded-xl overflow-hidden shadow-2xl">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <img src="https://ae01.alicdn.com/kf/S47c895fb82e14c1184cc414c70c25fbel.jpg" alt="Luxury Car Seat Accessories" class="w-full h-auto rounded-lg">
+                        
+                        <div class="mt-6 bg-gray-700 p-4 rounded-lg">
+                            <h3 class="text-xl font-bold mb-2">Bonus Pembelian Hari Ini:</h3>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Gratis Ongkos Kirim</li>
+                                <li>Garansi 1 Tahun</li>
+                                <li>E-Book Perawatan Mobil</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8 bg-gray-700">
+                        <div class="price-tag p-4 mb-6 text-center">
+                            <div class="text-sm line-through">Harga Normal: Rp 268,000</div>
+                            <div class="text-3xl font-bold">Rp 179,999</div>
+                            <div class="text-sm">Harga Promo Terbatas</div>
+                        </div>
+                        
+                        <div class="mb-6 bg-gray-600 p-3 rounded-lg text-center">
+                            <div class="flex justify-center items-center">
+                                <i class="fas fa-fire text-red-400 mr-2"></i>
+                                <span class="font-bold">Hanya tersisa <span id="stock-counter">42</span> stok!</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6 bg-gray-600 p-3 rounded-lg text-center">
+                            <div class="flex justify-center items-center">
+                                <i class="fas fa-clock text-amber-400 mr-2"></i>
+                                <span class="font-bold">Promo berakhir dalam: <span id="countdown-timer">00:00:00</span></span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://nava.orderonline.id/checkout-luxury-car-seat-accessories" class="block w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-4 px-6 rounded-lg text-center transition duration-300 mb-4">
+                            <i class="fas fa-shopping-cart mr-2"></i> BELI SEKARANG
+                        </a>
+                        
+                        <div class="flex items-center justify-center mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Logo_of_Indonesian_Bank_Association_%28IKBI%29.png" alt="Payment Methods" class="h-8 mr-2">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_dana_blue.svg" alt="Payment Methods" class="h-8 mr-2">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Logo_ovo_purple.svg" alt="Payment Methods" class="h-8">
+                        </div>
+                        
+                        <div class="text-center text-sm">
+                            <p><i class="fas fa-lock mr-1"></i> Transaksi 100% Aman</p>
+                            <p><i class="fas fa-truck mr-1"></i> Garansi Pengiriman</p>
+                            <p><i class="fas fa-undo mr-1"></i> Garansi Uang Kembali</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <a href="#order" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-full shadow-lg flex items-center">
+            <i class="fas fa-shopping-cart mr-2"></i> BELI SEKARANG
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-car text-amber-500 mr-2"></i> LuxuryCarSeat
+                    </h3>
+                    <p class="text-gray-400">Solusi premium untuk kenyamanan dan gaya interior mobil Anda.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Kontak Kami</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-amber-500 mr-2"></i> (021) 1234-5678
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-amber-500 mr-2"></i> cs@luxurycarseat.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> Jakarta, Indonesia
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Jam Operasional</h3>
+                    <p class="text-gray-400">Senin - Jumat: 09.00 - 17.00 WIB</p>
+                    <p class="text-gray-400">Sabtu: 09.00 - 15.00 WIB</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 LuxuryCarSeat. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Image Modal
+        function openModal(img) {
+            const modal = document.getElementById('modal');
+            const modalImg = document.getElementById('modal-img');
+            
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+        
+        function closeModal() {
+            document.getElementById('modal').style.display = "none";
+        }
+        
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        function animateCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // Start counters when scrolled to
+        let counted = false;
+        
+        window.addEventListener('scroll', () => {
+            const heroSection = document.querySelector('.hero');
+            const heroPosition = heroSection.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (heroPosition < screenPosition && !counted) {
+                animateCounters();
+                counted = true;
+            }
+        });
+        
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 0);
+            
+            const diff = endOfDay - now;
+            
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            // For the order section timer
+            const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('countdown-timer').textContent = formattedTime;
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+        
+        // Stock counter animation
+        function animateStockCounter() {
+            const stockCounter = document.getElementById('stock-counter');
+            let stock = parseInt(stockCounter.textContent);
+            const interval = setInterval(() => {
+                if (stock > 0) {
+                    stock--;
+                    stockCounter.textContent = stock;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 60000); // Decrease stock every minute for urgency effect
+        }
+        
+        // Start stock counter after page loads
+        window.addEventListener('load', animateStockCounter);
+    </script>
+</body>
+</html>
